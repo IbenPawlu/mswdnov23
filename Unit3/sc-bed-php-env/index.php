@@ -83,7 +83,7 @@ $grindWeight = 15;
 if ($beanWeight >= 30 || $grindWeight >= 20) {
     echo "<p>You have enough coffee</p>";
 } else {
-    echo "<p>Youy do not have enough coffee my guy</p>";
+    echo "<p>You do not have enough coffee my guy</p>";
 }
 
 $bingo = 90;
