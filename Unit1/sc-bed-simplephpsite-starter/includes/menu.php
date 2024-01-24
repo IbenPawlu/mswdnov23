@@ -16,6 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link <?= $_SERVER['SCRIPT_NAME'] === '/aboutmariadb.php' ? 'active' : ''?>" href="aboutmariadb.php">About MariaDB</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $_SERVER['SCRIPT_NAME'] === '/configuration.php' ? 'active' : ''?> "href="configuration.php">Configuration</a>
+                    </li>
                 </ul>
             </div>
         </div>
