@@ -1,3 +1,11 @@
+<?php
+$socials = [
+    ['name' => 'Twitter', 'url' => 'https://twitter.com/icemalta', 'logo' => 'bi-twitter-x'],
+    ['name' => 'Instagram', 'url' => 'https://www.instagram.com/icemalta', 'logo' => 'bi-instagram'],
+    ['name' => 'Facebook', 'url' => 'https://www.facebook.com/icemalta/', 'logo' => 'bi-facebook']
+];
+?>
+
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
@@ -10,12 +18,17 @@
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/icemalta"><i class="bi-twitter-x"
-                        style="font-size: 1.5rem;"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/icemalta"><i class="bi-instagram"
-                        style="font-size: 1.5rem;"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/icemalta/"><i class="bi-facebook"
-                        style="font-size: 1.5rem;"></i></a></li>
+            <?php
+            foreach ($socials as $social){
+            echo <<< LIST
+                <li class="ms-3">
+                <a class="text-body-secondary" target="_blank" href="{$social['url']}"><i class="{$social['logo']}"
+                style="font-size: 1.5rem;"></i> </a>
+                </li>
+            LIST;
+            }
+            ?>
         </ul>
+
     </footer>
 </div>

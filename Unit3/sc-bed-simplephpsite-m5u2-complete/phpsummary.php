@@ -10,6 +10,33 @@
         <h1>PHP Summary</h1>
         <?php
             printf('<p>You are running PHP %s</p>', phpversion());
+            
+            //Looping with Array
+            $camfam = ['Keith', 'Joanne', 'Paul', 'Abigail'];
+            foreach($camfam as $name){
+            echo "<p>The members are: $name</p>";
+            }
+
+            // Loop
+            $huntingSeason = 30;
+            $currentDay = 25;
+            while ($currentDay <= $huntingSeason) {
+                if ($currentDay === $huntingSeason) {
+                    echo "<p>Today is the last day to hunt</p>";
+                } else {
+                    $remainingDays = $huntingSeason - $currentDay;
+                    echo "<p>Today is day: $currentDay/$huntingSeason of the hunting season. I have $remainingDays days left to hunt!</p>";
+                }
+                $currentDay++;
+            }
+            
+            while ($currentDay <= $huntingSeason + 12) {
+                $daysOver = $currentDay - $huntingSeason;
+                echo "<p>It's $daysOver day/s past the ending date, that means that you are not allowed to hunt</p>";
+                $currentDay++;
+            }
+            // Extra
+            echo $_SERVER['SCRIPT_NAME'];
         ?>
 
         <div class="card">

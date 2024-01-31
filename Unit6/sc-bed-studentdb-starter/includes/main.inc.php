@@ -99,7 +99,9 @@ saveValue('sortBy', $sortBy);
  }
 }
 ?>
-
+<?php
+    include 'includes/menu.php'
+?>
 <div class="grid gap-0 row-gap-3">
     <div class="p-2 g-col-12">
         <div class="card">

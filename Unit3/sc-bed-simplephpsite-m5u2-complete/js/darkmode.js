@@ -41,6 +41,11 @@ function darkmode_init() {
         }
     };
 
+// what chatgpt added to switch to dark/light mode according to system preference if not set manually by user
+    if (prefersDarkScheme.matches && darkmodeCookie.get() !== 'false') {
+        darkmodeCookie.set('true');
+    }
+
     if (darkmodeCookie.get() === 'true') {
         document.querySelector('.darkmode').classList.add('active');
     }

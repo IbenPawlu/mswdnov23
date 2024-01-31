@@ -58,10 +58,21 @@ $gradeBookDetail = [
 $planets = ['Mercury'=>'Rocky', 'Venus'=>'Rocky', 'Earth'=>'Rocky',
  'Mars'=>'Rocky', 'Jupiter'=>'Gas', 'Saturn'=>'Gas',
  'Uranus'=>'Ice', 'Neptune'=>'Gas'];
+ $planets2 = [
+    ['name' => 'Mercury', 'type' => 'Rocky'],
+    ['name' => 'Venus', 'type' => 'Rocky'],
+    ['name' => 'Earth', 'type' => 'Rocky'],
+    ['name' => 'Mars', 'type' => 'Rocky'],
+    ['name' => 'Jupiter', 'type' => 'Gas'],
+    ['name' => 'Saturn', 'type' => 'Gas'],
+    ['name' => 'Uranus', 'type' => 'Ice'],
+    ['name' => 'Neptune', 'type' => 'Gas'],
+ ];
 
- foreach($planets as $planet=>$type) {
-    printf('<p>%s is a %s planet.</p>', $planet, $type);
+ foreach($planets2 as $planet) {
+    printf('<p>%s is a %s planet.</p>', $planet['name'], $planet['type']);
  }
+ print_r($planets2[1]);
 
 // Searching for an item in the array
 $jupiterMoons = ['Europa', 'Io', 'Ganymede', 'Callisto'];
@@ -72,19 +83,13 @@ if (in_array($search, $jupiterMoons)) {
     printf('<p>%s is not a moon of Jupiter</p>', $search);
 }
 
+$subjectToCheck = 'Physics';
+$studentToCheck = 'John Jefferson';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Check if the subject exists for the student
+if (isset($gradeBookDetail[$studentToCheck][$subjectToCheck])) {
+    echo "$subjectToCheck is a subject for $studentToCheck.";
+} else {
+    echo "$subjectToCheck is not a subject for $studentToCheck.";
+}
 ?>
