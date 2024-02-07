@@ -1,7 +1,7 @@
 <?php
 $menuItems = [
-    ['name' => 'Testing Area', 'url' => '/home.php'],
-    ['name' => 'Student DB', 'url' => '/includes/main.inc.php']
+    ['name' => 'Testing Area', 'url' => '/includes/home.php'],
+    ['name' => 'Student DB', 'url' => '/index.php']
 ];
 ?>
 
@@ -17,7 +17,7 @@ $menuItems = [
         foreach($menuItems as $items){
             $isActive = $items['url'] === $_SERVER['PHP_SELF'] ? "active" : "";
             echo <<<ITEMS
-        <li ><a class="nav-link $isActive" href="{$items['url']}">{$items['name']}</a></li>
+        <li><a class="nav-link $isActive" href="{$items['url']}">{$items['name']}</a></li>
         ITEMS;
         }
         ?>

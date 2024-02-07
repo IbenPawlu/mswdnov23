@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    include '/includes/menu.php';
+    include 'menu.php';
     ?>
 </body>
 </html>

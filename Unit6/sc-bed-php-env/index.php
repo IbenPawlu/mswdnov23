@@ -92,4 +92,5 @@ if (isset($gradeBookDetail[$studentToCheck][$subjectToCheck])) {
 } else {
     echo "$subjectToCheck is not a subject for $studentToCheck.";
 }
+
 ?>

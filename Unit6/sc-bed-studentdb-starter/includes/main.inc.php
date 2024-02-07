@@ -98,10 +98,10 @@ saveValue('sortBy', $sortBy);
  uasort($studentList, fn($a, $b) => $a[$sortBy] <=> $b[$sortBy]);
  }
 }
+
+include 'includes/menu.php'
 ?>
-<?php
-    include 'includes/menu.php'
-?>
+
 <div class="grid gap-0 row-gap-3">
     <div class="p-2 g-col-12">
         <div class="card">
